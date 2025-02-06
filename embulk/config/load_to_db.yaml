@@ -1,0 +1,14 @@
+in:
+  type: file
+  path_prefix: /workspace/data/csv/extracted/order_details
+  parser:
+    type: csv
+
+out:
+  type: postgresql
+  host: db
+  port: 5432
+  user: northwind_user
+  password: thewindisblowing
+  database: northwind
+  table: order_details

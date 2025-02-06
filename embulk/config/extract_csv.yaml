@@ -1,0 +1,22 @@
+in:
+  type: file
+  path_prefix: "C:/Users/olive/Desktop/prj_indicium/data/order_details.csv"
+  parser:
+    type: csv
+    columns:
+      - {name: order_id, type: long}
+      - {name: product_id, type: long}
+      - {name: unit_price, type: double}
+      - {name: quantity, type: long}
+      - {name: discount, type: double}
+
+out:
+  type: file
+  path_prefix: "C:/Users/olive/Desktop/prj_indicium/embulk/output"
+  file_ext: .csv
+  formatter:
+    type: csv
+    delimiter: ","
+    newline: LF
+    escape: '"'
+    quote: '"'
